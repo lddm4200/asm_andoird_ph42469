@@ -13,9 +13,16 @@
         android:text="Nhập thông tin sản phẩm"
         android:gravity="center"
         android:textSize="24dp"
-        android:textColor="@color/black"
+        android:textColor="#E91E63"
         android:textStyle="bold|italic"/>
-
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Tên: "
+    android:textSize="19dp"
+    android:textStyle="bold"
+    android:textColor="#E91E63"
+    />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,19 +34,57 @@
         android:textColor="@color/black"/>
 
 
-    <EditText
+    <LinearLayout
+        android:layout_marginVertical="10dp"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Giá: "
+            android:textSize="19dp"
+            android:textStyle="bold"
+            android:textColor="#E91E63"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Số Lượng: "
+            android:textSize="19dp"
+            android:textStyle="bold"
+            android:textColor="#E91E63"
+            android:layout_marginLeft="50dp"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+    android:layout_marginVertical="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:id="@+id/edtNameSV"
         android:hint="Giá"
         android:textSize="18dp"
         android:textStyle="bold"
-        android:layout_marginVertical="12dp"
         android:textColor="@color/black"/>
 
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:id="@+id/edtDiemTB"
         android:hint="SỐ Lượng"
@@ -48,7 +93,7 @@
         android:layout_marginBottom="12dp"
         android:textColor="@color/black"/>
 
-
+</LinearLayout>
 
     <ImageView
         android:id="@+id/imgAvatarSV"

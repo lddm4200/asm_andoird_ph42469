@@ -23,7 +23,7 @@ import retrofit2.http.Query;
 
 public interface ApiService {
 
-    String DOMAIN = "http://192.168.1.4:3000/api/";
+    String DOMAIN = "http://192.168.67.67:3000/api/";
 
     ApiService apiService  = new Retrofit.Builder()
             .baseUrl(ApiService.DOMAIN)

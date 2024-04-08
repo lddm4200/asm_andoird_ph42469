@@ -54,9 +54,9 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.viewHold
         if (position >= 0 && position <= list.size()) {
             SanPham sv = list.get(position);
 
-            holder.txtMaSV.setText("Tên sp: " + sv.getTen());
-            holder.txtNameSV.setText("Giá: " + sv.getGia());
-            holder.txtDiemTB.setText("Số lượng: " + sv.getSoLuong());
+            holder.txtTen.setText("Tên sp: " + sv.getTen());
+            holder.txtGia.setText("Giá: " + sv.getGia());
+            holder.txtSoLuong.setText("Số lượng: " + sv.getSoLuong());
 
             Glide.with(holder.itemView.getContext())
                     .load(sv.getImage())
@@ -106,6 +106,8 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.viewHold
             });
 
 
+
+
         }
     }
 
@@ -119,15 +121,15 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.viewHold
     }
 
     public static class viewHolder extends RecyclerView.ViewHolder {
-        TextView txtNameSV, txtMaSV, txtDiemTB;
+        TextView txtTen, txtGia, txtSoLuong;
         ImageView imgAvatar;
         ImageButton btnUpdate, btnDelete;
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
-            txtNameSV = itemView.findViewById(R.id.txtNameSV);
-            txtMaSV = itemView.findViewById(R.id.txtMaSV);
-            txtDiemTB = itemView.findViewById(R.id.txtDiemTB);
+            txtTen = itemView.findViewById(R.id.txtTen);
+            txtGia = itemView.findViewById(R.id.txtGia);
+            txtSoLuong = itemView.findViewById(R.id.txtSoLuong);
             imgAvatar = itemView.findViewById(R.id.imgAvatar);
             btnUpdate = itemView.findViewById(R.id.btnUpdate);
             btnDelete = itemView.findViewById(R.id.btnDelete);
